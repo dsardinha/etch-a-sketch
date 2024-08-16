@@ -3,11 +3,24 @@ const btn = document.querySelector('button');
 
 let gridSideSize = 16;
 
+const generateRandomRGBValue = () => {
+    return Math.floor(Math.random() * 256);
+}
+
+const generateRandomRGB = () => {
+    const r = generateRandomRGBValue();
+    const g = generateRandomRGBValue();
+    const b = generateRandomRGBValue();
+    return [r,g,b];
+}
+
 const squareHover = () => {
     const squares = document.querySelectorAll('.square')
     squares.forEach((square) => {
         square.addEventListener('mouseover', () => {
-            square.classList.add('square-hover');
+            const rgbArr = generateRandomRGB();
+            console.log(rgbArr);
+            square.style.backgroundColor = `rgb(${rgbArr[0]}, ${rgbArr[1]}, ${rgbArr[2]})`;
         })
     })
 }
