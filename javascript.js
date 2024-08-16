@@ -50,7 +50,11 @@ const deleteGrid = () => {
 }
 
 btn.addEventListener('click', () => {
-    gridSideSize = Number(prompt('Please select the number of squares per side for the new grid.'));
+    gridSideSize = Number(prompt('Please select the number of squares per side for the new grid\nNote: max value is 100.'));
+    if (isNaN(gridSideSize) || gridSideSize > 100) {
+        alert('Invalid value. Please insert a number below 100.')
+        return;
+    }
     deleteGrid();
     createGrid(gridSideSize);
 })
