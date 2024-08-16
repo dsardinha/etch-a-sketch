@@ -1,11 +1,13 @@
 .grid {
     display: flex;
+    box-sizing: border-box;
     width: 600px;
     height: 600px;
 }
 
 .square {
     border: 1px solid black;
+    box-sizing: border-box;
 }
 
 .square-hover {
