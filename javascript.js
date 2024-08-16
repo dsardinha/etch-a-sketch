@@ -16,11 +16,15 @@ const generateRandomRGB = () => {
 
 const squareHover = () => {
     const squares = document.querySelectorAll('.square')
+    let hoverCount = 0;
     squares.forEach((square) => {
         square.addEventListener('mouseover', () => {
             const rgbArr = generateRandomRGB();
             console.log(rgbArr);
             square.style.backgroundColor = `rgb(${rgbArr[0]}, ${rgbArr[1]}, ${rgbArr[2]})`;
+            if (hoverCount <= 10) {
+                square.style.opacity = 10 * ++hoverCount + '%';
+            }
         })
     })
 }
