@@ -11,4 +11,9 @@ for (let j = 0; j < 16; j++) {
     grid.appendChild(gridColumn);
 }
 
-
+const squares = document.querySelectorAll('.square')
+squares.forEach((square) => {
+    square.addEventListener('mouseover', () => {
+        square.classList.add('square-hover');
+    })
+})
