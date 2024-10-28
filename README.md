@@ -1,6 +1,7 @@
 # etch-a-sketch
 
 Etch A Sketch grid developed with JavaScript. 
+
 Features:
 - Button to create a new grid with up to 100x100 squares
 - Randomized squares’ RGB values with each interaction (hover)
